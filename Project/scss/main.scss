@@ -1,9 +1,12 @@
 @import "./misc/hardreset";
 @import "./misc/variables";
+@import "./misc/grid";
 
 @import "./general/global";
 @import "./general/typography";
 
 @import "./elements/buttons";
 
+@import "./blocks/header";
+@import "./blocks/logo";
 @import "./blocks/navigation";

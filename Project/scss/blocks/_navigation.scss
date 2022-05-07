@@ -1,0 +1,76 @@
+.menu {
+  &__list {
+    transition: all 0.3s linear;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 1rem;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 3px 6px $shadow-color;
+  }
+
+  &__link {
+    font-size: 0.69rem;
+    color: $secondary-color;
+    font-family: $openSans-fontfamily;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  &__link:hover {
+    color: black;
+  }
+
+  &__burger {
+    padding: 0.5rem;
+    position: absolute;
+    right: 1.56rem;
+    top: 1rem;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 1.5rem;
+      height: 2px;
+      background-color: $main-color;
+      margin-bottom: 0.35rem;
+      transition: 0.5s linear;
+    }
+
+    span:first-child {
+      margin-top: auto;
+    }
+
+  }
+}
+
+input {
+  display: none;
+}
+
+input#menu:checked {
+  & ~ div {
+    .menu__list {
+      max-height: 10rem;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    .menu__burger {
+      span {
+        &:nth-child(1) {
+          transform: translateY(8px) rotate(225deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(-225deg);
+        }
+        &:nth-child(3) {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+
