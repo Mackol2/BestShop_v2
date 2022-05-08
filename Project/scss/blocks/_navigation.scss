@@ -8,8 +8,18 @@
     position: absolute;
     width: 100%;
     box-shadow: 0 3px 6px $shadow-color;
-  }
 
+    @media screen and (min-width: 1200px) {
+      overflow: visible;
+      position: unset;
+      max-height: unset;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: none;
+    }
+  }
   &__link {
     font-size: 0.69rem;
     color: $secondary-color;
@@ -17,6 +27,11 @@
     font-weight: 800;
     text-decoration: none;
     transition: 0.5s;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 2rem;
+    }
+
   }
 
   &__link:hover {
@@ -29,6 +44,10 @@
     right: 1.56rem;
     top: 1rem;
     cursor: pointer;
+
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
 
     span {
       display: block;
@@ -57,14 +76,17 @@ input#menu:checked {
       padding: 1rem;
       margin-top: 1rem;
     }
+
     .menu__burger {
       span {
         &:nth-child(1) {
           transform: translateY(8px) rotate(225deg);
         }
+
         &:nth-child(2) {
           transform: rotate(-225deg);
         }
+
         &:nth-child(3) {
           opacity: 0;
         }
