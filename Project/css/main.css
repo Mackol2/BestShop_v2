@@ -592,10 +592,12 @@ body {
     box-shadow: none;
   }
 }
-.menu__item {
-  height: 100%;
-  display: flex;
-  justify-content: center;
+@media screen and (min-width: 1200px) {
+  .menu__item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 .menu__link {
   font-size: 0.69rem;
