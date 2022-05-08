@@ -20,6 +20,14 @@
       box-shadow: none;
     }
   }
+
+  &__item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+  }
+
   &__link {
     font-size: 0.69rem;
     color: $secondary-color;
@@ -27,15 +35,21 @@
     font-weight: 800;
     text-decoration: none;
     transition: 0.5s;
+    display: flex;
+    align-items: center;
 
     @media screen and (min-width: 1200px) {
-      margin-right: 2rem;
+      padding: 0 1rem;
     }
 
   }
 
   &__link:hover {
     color: black;
+
+    @media screen and (min-width: 1200px) {
+      border-bottom: 2px solid $main-color;
+    }
   }
 
   &__burger {
